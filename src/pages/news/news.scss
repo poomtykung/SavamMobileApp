@@ -1,0 +1,122 @@
+page-news {
+    @media only screen and (max-width: 320px) {
+        .first-news img {
+            margin: 5px 0px 5px 0px !important;
+        }
+        p{
+            margin-left: 0px !important;
+        }
+        .text-first-news p {
+            margin-left: 10px !important;
+            margin-right: 10px;
+        }
+    }
+    @media only screen and (max-width: 414px) and (min-width: 414px) {
+        .news-details img {
+            text-align: center !important;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .news-details img {
+            width: 90%;
+        }
+        .head-text-news {
+            font-size: 32px !important;
+        }
+        .new-shop {
+            font-size: 21px;
+        }
+        p {
+            font-size: 21px;
+        }
+        h1 {
+            font-size: 24px !important;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .news-details img {
+            width: 90%;
+        }
+        .head-text-news {
+            font-size: 40px !important;
+        }
+        .new-shop {
+            font-size: 24px;
+        }
+        p {
+            font-size: 26px;
+        }
+        h1 {
+            font-size: 32px !important;
+        }
+    }
+    .head-text{
+        background: #fff;
+        color: #F26618;
+        font-size: 28px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .new-shop {
+        color: #F26618;
+        margin: 0 0 5px 5px;
+        background: #dadada;
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+    .head-text-news {
+        font-size: 24px;
+        color: #2A1D0D;
+        margin: 5px 0;
+    }
+    p {
+        color: #999;
+    }
+    h1 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-right: 10px;
+        color: #2A1D0D;
+    }
+    .first-news img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        margin: auto;
+    }
+    .first-article_box {
+        margin: 15px 20px 0;
+    }
+    .article_box {
+        margin: 0 20px;
+        padding: 15px 0;
+        border-top: 1px solid #ececec;
+        h1, p {
+            margin-left: 10px
+        }
+    }
+    .img-cropper {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    .img-cropper img {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+    }
+    @media only screen and (max-width: 320px) {
+        .img-cropper {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}

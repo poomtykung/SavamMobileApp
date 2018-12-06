@@ -1,0 +1,101 @@
+page-contact {
+    @media only screen and (min-width: 768px) {
+        h1 {
+            font-size: 21px !important;
+            margin-top: 0px;
+        }
+        p {
+            font-size: 21px !important;
+        }
+        ion-icon {
+            font-size: 21px !important;
+        }
+        .profile-img img {
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 35px;
+            width: 25%;
+            height: 100%;
+        }
+        .icon-img img {
+            width: 50% !important;
+        }
+        .btn-signout {
+            font-size: 23px !important;
+            padding: 15px !important;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        h1 {
+            font-size: 32px !important;
+            margin-top: 0px;
+        }
+        p {
+            font-size: 32px !important;
+        }
+        ion-icon {
+            font-size: 32px !important;
+        }
+        .btn-signout {
+            font-size: 31px !important;
+            padding: 24px !important;
+        }
+    }
+    h1 {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    p {
+        font-size: 16px;
+    }
+    ion-icon {
+        font-size: 16px;
+        color: #999;
+    }
+    .profile-img img {
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 35px;
+        width: 30%;
+        height: 100%;
+    }
+    .icon-img img {
+        width: 100%;
+    }
+    .btn-setting {
+        padding: 5px 10px;
+        font-size: 18px;
+        width: 100%;
+        background: none;
+        text-align: left;
+    }
+    .btn-setting img {
+        margin-right: 20px;
+    }
+    .btn-signout {
+        background: #F26618;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    ul{
+        list-style: none;
+        padding-left: 10px;
+        width: 100%;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+    li{
+        border-bottom: 1px solid #ececec;
+    }
+    .noborder{
+        border: none;
+    }
+    .toggle-ios.toggle-checked .toggle-icon {
+        background-color: #F26618;
+    }
+}

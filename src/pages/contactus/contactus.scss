@@ -1,0 +1,99 @@
+page-contactus {
+    @media only screen and (min-width: 768px) {
+        .head-text {
+            font-size: 40px !important;
+        }
+        .icon-img img {
+            width: 50%;
+        }
+        p {
+            font-size: 21px;
+        }
+        label {
+            font-size: 21px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .head-text {
+            font-size: 70px !important;
+        }
+        .icon-img img {
+            width: 60% !important;
+            margin-left: 10px;
+        }
+        p {
+            font-size: 32px !important;
+        }
+        label {
+            font-size: 32px !important;
+        }
+    }
+    .btn-setting {
+        padding: 5px 10px;
+        font-size: 18px;
+        width: 100%;
+        background: none;
+        text-align: left;
+    }
+    .btn-setting img {
+        margin-right: 20px;
+    }
+    .btn-signout {
+        background: #F26618;
+        color: #fff;
+        font-size: 18px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: 100%;
+        height: 55px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    ul{
+        list-style: none;
+        padding: 0 10px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    li{
+        border-bottom: 1px solid #ececec;
+        padding: 10px 0;
+    }
+    .toggle-ios.toggle-checked .toggle-icon {
+        background-color: #F26618;
+    }
+    .head-text{
+        background: #fff;
+        color: #F26618;
+        font-size: 28px;
+        margin-left: 20px;
+        margin-top: 34px;
+        margin-bottom: 30px;
+    }
+    .new-shop {
+        color: #F26618;
+        margin-left: 10px;
+        background: #dadada;
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+    .head-text-news {
+        font-size: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    p{
+        color: #999;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    h1{
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+    img{
+        margin: auto;
+    }
+}

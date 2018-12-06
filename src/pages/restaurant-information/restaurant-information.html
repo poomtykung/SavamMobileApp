@@ -1,0 +1,48 @@
+<!--
+  Generated template for the RestaurantInformationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="restaurantHeader">
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="backButton()">
+        <ion-icon name="arrow-back" style="color:white !important"></ion-icon>
+      </button>
+    </ion-buttons>
+    <!-- <ion-title>{{restaurant_name}}</ion-title> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div> -->
+    <ion-row>
+      <!-- <img src="assets/imgs/01-Home/pexels-photo-675951.png" style="width: 95%;"> -->
+      <img src="assets/imgs/01-Home/pexels-photo-675951.png" style="width: 100%; height: 200px">
+    </ion-row>
+    <ion-row>
+      <div class="restaurant_information_box">
+        <ion-row class='restaurant_name'>{{restaurant_name}}</ion-row>
+        <ion-row class='restaurant_description'><img class="icon-img" src="assets/imgs/02-Search/icon-placeholder.png">{{district_name}}</ion-row>
+        <ion-row class='restaurant_description'><img class="icon-img" src="assets/imgs/02-Search/icon-Time-2.png">{{openTime}}</ion-row>
+        <ion-row class='restaurant_description'><img class="icon-img" src="assets/imgs/02-Search/icon-phone.png">{{telephone}}</ion-row>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div class="menu_textbox">เมนูอาหาร</div>
+      <ion-slides slidesPerView="2.2" spaceBetween="1">
+        <ion-slide *ngFor="let item of listDishDetailLists">
+          <div class="food_preview_box">
+            <img class="food_preview_picture" src="{{item[2]}}">
+            <div class="food_preview_name">{{item[0]}}</div>
+            <div class="food_preview_price">{{item[1]}} THB</div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row>
+      <div #map id='map'></div>
+    </ion-row>
+  <!-- </div> -->
+</ion-content>

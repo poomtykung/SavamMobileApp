@@ -1,0 +1,7 @@
+{
+  "name": "Savam_Mobile_App",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

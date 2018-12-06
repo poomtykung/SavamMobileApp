@@ -1,0 +1,36 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <!-- <ion-title>signup</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row text-left><div class="head-txt">สร้างบัญชีผู้ใช้</div></ion-row>
+  <ion-row class="signup_image">
+    <ion-col col-6 text-right>
+      <img src="assets/imgs/00-Log in/user.png"
+      style="margin-right: -40px;">
+    </ion-col>
+    <ion-col col-6 text-left>
+      <img src="assets/imgs/00-Log in/uppic.png"
+      style="margin-top: 65px;" (click)="getPictures()">
+    </ion-col>
+  </ion-row>
+  <ion-row><ion-input placeholder="ชื่อผู้ใช้" [(ngModel)]='username'></ion-input></ion-row>
+  <ion-row><ion-input placeholder="อีเมล" [(ngModel)]='email'></ion-input></ion-row>
+  <ion-row><ion-input placeholder="รหัสผ่าน" type="password" [(ngModel)]='password'></ion-input></ion-row>
+  <ion-row><ion-input placeholder="ยืนยันรหัสผ่าน" type="password" [(ngModel)]='confirmPassword'></ion-input></ion-row>
+  <ion-row><button class="signup-btn" (click)="getRegisterData()">สร้างบัญชีผู้ใช้</button></ion-row>
+  <ion-row text-center>
+    <label class="condition">By signing up, you agree to the <a>Savam Terms of Service</a> and <a>Privacy Policy</a></label>
+  </ion-row>
+</ion-content>

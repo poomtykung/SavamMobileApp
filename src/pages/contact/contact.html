@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>โปรไฟล์</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content class="bg-app">
+  <div class="card">
+  <ion-row class="profile-img">
+    <img src="assets/imgs/04-Profile/20150723170640.png">
+  </ion-row>
+  <ion-row>
+    <ul>
+      <li>        
+        <button class="btn-setting" (click)="ProfileConfig()">
+          <ion-row>
+            <ion-col col-1 text-center>
+              <div class="icon-img"><img src="assets/imgs/04-Profile/Settings-2.png"></div>
+            </ion-col>
+            <ion-col col-10 text-left><h1>ตั้งค่าโปรไฟล์ของฉัน</h1></ion-col>
+            <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+          </ion-row>
+        </button>
+      </li>
+      <li>
+        <button class="btn-setting">
+          <ion-row>
+            <ion-col col-1 text-center>
+              <div class="icon-img"><img src="assets/imgs/04-Profile/Notification.png"></div>
+            </ion-col>
+            <ion-col col-10 text-left><h1>การแจ้งเตือน</h1></ion-col>
+            <ion-col col-1 text-center>
+              <ion-toggle checked="false" style="float: right;" [(ngModel)]='isNotificationShow' (ionChange)="enableNotification()"></ion-toggle>
+            </ion-col>
+          </ion-row>
+        </button>
+      </li>
+      <li class="noborder">
+        <button class="btn-setting" (click)="ContactUs()">
+          <ion-row>
+            <ion-col col-1 text-center>
+              <div class="icon-img"><img src="assets/imgs/04-Profile/mobile.png"></div>
+            </ion-col>
+            <ion-col col-10 text-left><h1>ติดต่อเรา</h1></ion-col>
+            <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+          </ion-row>
+        </button>
+      </li>
+    </ul>
+  </ion-row>
+  </div>
+  <ion-row style="margin-top: 40px; margin-bottom: 40px;">
+    <button class="btn-signout" (click)="signoutButton()">ออกจากระบบ</button>
+  </ion-row>
+</ion-content>

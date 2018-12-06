@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Savam</ion-title>
+  </ion-navbar>
+  <div class="bg-search">
+    <ion-item style="border-radius: 7px;">        
+      <ion-label><ion-icon name="search"></ion-icon></ion-label>
+      <ion-input type="text" placeholder="ค้นหาร้านอาหาร" (click)="search()"></ion-input>
+    </ion-item>
+  </div>
+</ion-header>
+
+<ion-content class="bg-app">
+  <div class="card">
+    <ion-row style="padding-top: 20px;">
+      <ion-col col-3 *ngFor="let item of categoryDataListsWithArray">
+        <button class="btn-home" *ngIf="item[0].length != 0" (click)="gotoRestaurantListByCategory(item[0].id_product_type)">
+          <img src="assets/imgs/01-Home/01-sushi.png">
+          <p>{{item[0].product_type_name}}</p>
+        </button>
+        <button class="btn-home" *ngIf="item[1].length != 0" (click)="gotoRestaurantListByCategory(item[0].id_product_type)">
+          <img src="assets/imgs/01-Home/01-sushi.png">
+          <p>{{item[1].product_type_name}}</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="card" style="margin-top: 20px; padding-bottom: 20px;">
+    <ion-row style="margin-bottom: 10px;">
+      <ion-col col-8>
+        <div class="head-text">ร้านอาหารติดอันดับ</div>
+      </ion-col>
+      <ion-col col-4 text-right>
+        <div class="view-text">ดูทั้งหมด</div>
+      </ion-col>
+    </ion-row>
+    <ion-slides slidesPerView="2.2" spaceBetween="1">
+      <ion-slide *ngFor="let restaurantData of restaurantDataLists" (click)="gotoRestaurantInfo(restaurantData)">
+        <div class="restaurant_container">
+          <img src="assets/imgs/01-Home/pexels-photo-675951.png" style="width: 100%;">
+          <div class="restaurant_text">
+            <div class="restaurant_name">{{restaurantData.restaurant_name}}</div>
+            <div class="restaurant_place"><img src="assets/icon/mappin.png" class="mappin">ทองหล่อ</div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

@@ -1,0 +1,8 @@
+diff a/package.json b/package.json	(rejected hunks)
+@@ -74,5 +74,4 @@
+       "android"
+     ]
+   }
+-}
+\ No newline at end of file
+ }

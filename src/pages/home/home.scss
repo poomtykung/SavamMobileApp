@@ -1,0 +1,104 @@
+page-home {
+    @media only screen and (max-width: 320px) {
+        .btn-home p{
+            font-size: 12px;
+        }
+        .head-text {
+            font-size: 20px !important;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .btn-home p{
+            font-size: 21px;
+        }
+        .head-text {
+            font-size: 36px !important;
+        }
+        .view-text {
+            font-size: 24px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .btn-home p{
+            font-size: 30px;
+        }
+        .head-text {
+            font-size: 50px !important;
+        }
+        .view-text {
+            font-size: 32px;
+        }
+    }
+    .bg-search{
+        background: #F26618;
+        text-align: center;
+        height: 60px;
+        padding: 3px 10px;
+    }
+    .searchTab{
+        background: #fff;
+        width: 100%;
+        border: none;
+        text-align: center;
+    }
+    .btn-home{
+        background: none;
+        text-align: center;
+        width: 100%;
+    }
+    .btn-home img{
+        background: none;
+        text-align: center;
+        width: 50%;
+    }
+    .head-text {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+    .view-text {
+        margin-right: 10px;
+        color: #F26618;
+        margin-top: 10px;
+    }
+    ion-slide.swiper-slide{
+        width: 160px !important;
+        margin-left: 10px;
+    }
+    .restaurant_container {
+        color: white;
+        position: relative;
+        width: 160px;
+        height: 160px;
+        img{
+            border-radius: 15px
+        }
+        .restaurant_text {
+            font-size: 16px;
+            position: absolute;
+            left: 15px;
+            bottom: 10%;
+            text-align: left;
+        }
+        .restaurant_place {
+            font-size: 13px;
+        }
+    }
+    .restaurant_container:before {
+        display: block;
+        position: absolute;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#4040408a));
+        background-image: linear-gradient(to bottom, transparent 10%, #4040408a 100%);
+        height: 40%;
+        width: 100%;
+        content: "";
+        bottom: 0px;
+        left: 0;
+        border-radius: 0 0 15px 15px;
+    }
+    .mappin {
+        width: 10px;
+        margin-right: 3px;
+    }
+}

@@ -1,0 +1,131 @@
+page-profile-config {
+    @media only screen and (max-width: 320px) {
+        h1 {
+            font-size: 15px !important;
+            margin-top: 0px;
+        }
+        p {
+            font-size: 15px !important;
+        }
+        ion-icon {
+            font-size: 15px !important;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        h1 {
+            font-size: 21px !important;
+        }
+        p {
+            font-size: 21px !important;
+        }
+        ion-icon {
+            font-size: 21px !important;
+        }
+        .profile-img img {
+            margin-right: -120px !important;
+            width: 60%;
+            border-radius: 50%;
+        }
+        .camera {
+            padding: 10px !important;
+            border-radius: 50% !important;
+            margin-top: 230px !important;
+            margin-left: 25px !important;
+            font-size: 40px;
+        }
+        .icon-img img {
+            width: 50%;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        h1 {
+            font-size: 32px !important;
+        }
+        p {
+            font-size: 32px !important;
+        }
+        ion-icon {
+            font-size: 32px !important;
+        }
+        .profile-img img {
+            margin-right: -120px !important;
+            width: 60%;
+            border-radius: 50%;
+        }
+        .camera {
+            padding: 10px !important;
+            border-radius: 50% !important;
+            margin-top: 275px !important;
+            margin-left: 15px !important;
+            font-size: 40px !important;
+        }
+        .icon-img img {
+            width: 50%;
+        }
+    }
+    .btn-setting {
+        font-size: 18px;
+        width: 100%;
+        background: none;
+    }
+    .btn-setting img {
+        margin-right: 20px;
+    }
+    .btn-signout {
+        background: #F26618;
+        color: #fff;
+        font-size: 18px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: 100%;
+        height: 55px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    ul{
+        list-style: none;
+        padding-left: 10px;
+        width: 100%;
+        margin-right: 10px;
+    }
+    li{
+        border-bottom: 1px solid #ececec;
+        padding: 10px 0;
+    }
+    h1 {
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    p {
+        color: #999;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 18px;
+    }
+    ion-icon {
+        font-size: 18px;
+        color: #999;
+    }
+    .toggle-ios.toggle-checked .toggle-icon {
+        background-color: #F26618;
+    }
+    .camera {
+        color: #fff;
+        background: #F26618;
+        padding: 5px;
+        border: none;
+        border-radius: 50%;
+        margin-top: 105px;
+        margin-left: 0px;
+    }
+    .profile-img img {
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 35px;
+        margin-right: -40px;
+    }
+    .noborder {
+        border: none;
+        padding: 10px 0 0 0;
+    }
+}

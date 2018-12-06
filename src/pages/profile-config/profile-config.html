@@ -1,0 +1,96 @@
+<!--
+  Generated template for the ProfileConfigPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ตั้งค่าโปรไฟล์</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-app">
+  <div class="card">
+    <ion-row>
+      <ion-col col-6 text-right>
+        <div class="profile-img">
+          <img src="assets/imgs/04-Profile/20150723170640.png">
+        </div>
+      </ion-col>
+      <ion-col col-6 text-left>
+        <ion-icon name="camera" class="camera"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ul>
+        <li>        
+          <button class="btn-setting" (click)="gotoEditName()">
+            <ion-row>
+              <ion-col col-1 text-center>
+                <div class="icon-img"><img src="assets/imgs/04-Profile/profile user.png"></div>
+              </ion-col>
+              <ion-col col-5 text-left><h1>ชื่อผู้ใช้</h1></ion-col>
+              <ion-col col-5 text-right><p>{{name}}</p></ion-col>
+              <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+            </ion-row>
+          </button>
+        </li>
+        <li>
+          <button class="btn-setting">
+            <ion-row>
+              <ion-col col-1 text-center>
+                <div class="icon-img"><img src="assets/imgs/04-Profile/Icon-Mail.png"></div>
+              </ion-col>
+              <ion-col col-2 text-left><h1>อีเมล</h1></ion-col>
+              <ion-col col-8 text-right><p>{{email}}</p></ion-col>
+              <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+            </ion-row>
+          </button>
+        </li>
+        <li class="noborder">
+          <button class="btn-setting" (click)="gotoEditPassword()">
+            <ion-row>
+              <ion-col col-1 text-center>
+                <div class="icon-img"><img src="assets/imgs/04-Profile/3F.png"></div>
+              </ion-col>
+              <ion-col col-5 text-left><h1>เปลี่ยนรหัสผ่าน</h1></ion-col>
+              <ion-col col-5 text-right></ion-col>
+              <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+            </ion-row>
+          </button>
+        </li>
+      </ul>
+    </ion-row>
+  </div>
+  <div class="card" style="margin-top: 15px;">
+    <ion-row>
+      <ul>
+        <li>
+          <button class="btn-setting" (click)="gotoEditTelephoneNumber()">
+            <ion-row>
+              <ion-col col-1 text-center>
+                <div class="icon-img"><img src="assets/imgs/04-Profile/mobile2.png"></div>
+              </ion-col>
+              <ion-col col-5 text-left><h1>เบอร์โทรศัพท์</h1></ion-col>
+              <ion-col col-5 text-right><p>{{tel}}</p></ion-col>
+              <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+            </ion-row>
+          </button>
+        </li>
+        <li class="noborder">
+          <button class="btn-setting" (click)="gotoBirthdate()">
+            <ion-row>
+              <ion-col col-1 text-center>
+                <div class="icon-img"><img src="assets/imgs/04-Profile/gift.png"></div>
+              </ion-col>
+              <ion-col col-5 text-left><h1>วัดเกิด</h1></ion-col>
+              <ion-col col-5 text-right><p>{{birthDate}}</p></ion-col>
+              <ion-col col-1 text-center><ion-icon name="arrow-forward"></ion-icon></ion-col>
+            </ion-row>
+          </button>
+        </li>
+      </ul>
+    </ion-row>
+  </div>
+</ion-content>
