@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { getNonHydratedSegmentIfLinkAndUrlMatch } from 'ionic-angular/umd/navigation/url-serializer';
+//import { analyzeAndValidateNgModules } from '@angular/compiler';
+//import { getNonHydratedSegmentIfLinkAndUrlMatch } from 'ionic-angular/umd/navigation/url-serializer';
 import { SigninPage } from '../signin/signin';
 import {ImagePicker} from  '@ionic-native/image-picker';
 import { Base64 } from '@ionic-native/base64';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Storage } from '@ionic/storage';
 // import {Md5} from 'ts-md5/dist/md5';
 
 
@@ -107,9 +108,9 @@ export class SignupPage {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
       let base64Image = 'data:image/jpeg;base64,' + imageData;
-     /* var myElement = document.getElementById("userImageProfile");
-      myElement.style.backgroundImage = "url('"+base64Image+"')";*/
       this.baseImg = base64Image;
+
+      /**insert to storage */
      }, (err) => {
         // Handle error
      });    
