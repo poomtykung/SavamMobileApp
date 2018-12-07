@@ -21,7 +21,8 @@ import { NewsDatailsPage } from '../pages/news-datails/news-datails';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { Base64 } from '@ionic-native/base64';
+import { Camera } from '@ionic-native/camera';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { ImagePicker } from '@ionic-native/image-picker';
@@ -98,6 +99,8 @@ import { ResterantListsPage} from '../pages/resterant-lists/resterant-lists';
     ImagePicker,
     Webservices,
     AndroidPermissions,
+    Base64,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

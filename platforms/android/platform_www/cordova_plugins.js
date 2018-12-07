@@ -1,97 +1,51 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-android-permissions.Permissions",
-    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
-    "pluginId": "cordova-plugin-android-permissions",
+    "id": "cordova-plugin-camera.Camera",
+    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+    "pluginId": "cordova-plugin-camera",
     "clobbers": [
-      "cordova.plugins.permissions"
+      "Camera"
     ]
   },
   {
-    "id": "cordova-plugin-device.device",
-    "file": "plugins/cordova-plugin-device/www/device.js",
-    "pluginId": "cordova-plugin-device",
+    "id": "cordova-plugin-camera.CameraPopoverOptions",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+    "pluginId": "cordova-plugin-camera",
     "clobbers": [
-      "device"
+      "CameraPopoverOptions"
     ]
   },
   {
-    "id": "cordova-plugin-geolocation.geolocation",
-    "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
-    "pluginId": "cordova-plugin-geolocation",
+    "id": "cordova-plugin-camera.camera",
+    "file": "plugins/cordova-plugin-camera/www/Camera.js",
+    "pluginId": "cordova-plugin-camera",
     "clobbers": [
-      "navigator.geolocation"
+      "navigator.camera"
     ]
   },
   {
-    "id": "cordova-plugin-geolocation.PositionError",
-    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-    "pluginId": "cordova-plugin-geolocation",
-    "runs": true
-  },
-  {
-    "id": "cordova-plugin-ionic-keyboard.keyboard",
-    "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
-    "pluginId": "cordova-plugin-ionic-keyboard",
+    "id": "cordova-plugin-camera.CameraPopoverHandle",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+    "pluginId": "cordova-plugin-camera",
     "clobbers": [
-      "window.Keyboard"
+      "CameraPopoverHandle"
     ]
   },
   {
-    "id": "cordova-plugin-ionic-webview.IonicWebView",
-    "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
-    "pluginId": "cordova-plugin-ionic-webview",
+    "id": "com-badrit-base64.Base64",
+    "file": "plugins/com-badrit-base64/www/Base64.js",
+    "pluginId": "com-badrit-base64",
     "clobbers": [
-      "Ionic.WebView"
-    ]
-  },
-  {
-    "id": "cordova-plugin-splashscreen.SplashScreen",
-    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-    "pluginId": "cordova-plugin-splashscreen",
-    "clobbers": [
-      "navigator.splashscreen"
-    ]
-  },
-  {
-    "id": "cordova-plugin-statusbar.statusbar",
-    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-    "pluginId": "cordova-plugin-statusbar",
-    "clobbers": [
-      "window.StatusBar"
-    ]
-  },
-  {
-    "id": "cordova-plugin-telerik-imagepicker.ImagePicker",
-    "file": "plugins/cordova-plugin-telerik-imagepicker/www/imagepicker.js",
-    "pluginId": "cordova-plugin-telerik-imagepicker",
-    "clobbers": [
-      "plugins.imagePicker"
-    ]
-  },
-  {
-    "id": "cordova-sqlite-storage.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-storage",
-    "clobbers": [
-      "SQLitePlugin"
+      "navigator.Base64"
     ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-android-permissions": "1.0.0",
-  "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-geolocation": "4.0.1",
-  "cordova-plugin-ionic-keyboard": "2.1.3",
-  "cordova-plugin-ionic-webview": "2.2.3",
-  "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-plugin-statusbar": "2.4.2",
-  "cordova-plugin-telerik-imagepicker": "2.2.2",
-  "cordova-plugin-whitelist": "1.3.3",
-  "cordova-sqlite-storage": "2.5.1"
+  "cordova-plugin-camera": "4.0.3",
+  "com-badrit-base64": "0.2.0"
 };
 // BOTTOM OF METADATA
 });

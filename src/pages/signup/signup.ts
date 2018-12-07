@@ -5,6 +5,8 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { getNonHydratedSegmentIfLinkAndUrlMatch } from 'ionic-angular/umd/navigation/url-serializer';
 import { SigninPage } from '../signin/signin';
 import {ImagePicker} from  '@ionic-native/image-picker';
+import { Base64 } from '@ionic-native/base64';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 // import {Md5} from 'ts-md5/dist/md5';
 
 
@@ -29,8 +31,9 @@ export class SignupPage {
   confirmPassword: string;
   savamAppURL = "http://savamapp.com/API/";
   public result: any;
+  baseImg:string="assets/imgs/00-Log in/user.png"; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public imagePicker:ImagePicker) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public imagePicker:ImagePicker, public base64: Base64, private camera: Camera) {
   }
 
   ionViewDidLoad() {
@@ -93,17 +96,22 @@ export class SignupPage {
     return re.test(email);
   }
 
-  getPictures(){
-
-    //TODO
-    this.imagePicker.getPictures({
-    }).then( results =>{
-      console.log(results);
-      for(let i=0; i < results.length;i++){
-        console.log('Image URI: ' + results[i]);
-      };
-    }, (err) => { 
-
-    });
+  getPictures() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    this.camera.getPicture(options).then((imageData) => {
+      // imageData is either a base64 encoded string or a file URI
+      // If it's base64 (DATA_URL):
+      let base64Image = 'data:image/jpeg;base64,' + imageData;
+     /* var myElement = document.getElementById("userImageProfile");
+      myElement.style.backgroundImage = "url('"+base64Image+"')";*/
+      this.baseImg = base64Image;
+     }, (err) => {
+        // Handle error
+     });    
   }
 }

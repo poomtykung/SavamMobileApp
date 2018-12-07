@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\PymainPJ\savam_mobile_app_gitignore23\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\PymainPJ\savam_mobile_app_gitignore23\platforms\android\CordovaLib\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\pymain\SavamMobileApp\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\pymain\SavamMobileApp\platforms\android\CordovaLib\src\debug\jniLibs"/></dataSet></merger>
