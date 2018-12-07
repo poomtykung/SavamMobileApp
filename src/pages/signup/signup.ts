@@ -5,9 +5,12 @@ import { HttpClient } from '@angular/common/http';
 //import { getNonHydratedSegmentIfLinkAndUrlMatch } from 'ionic-angular/umd/navigation/url-serializer';
 import { SigninPage } from '../signin/signin';
 import {ImagePicker} from  '@ionic-native/image-picker';
+<<<<<<< HEAD
 import { Base64 } from '@ionic-native/base64';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Storage } from '@ionic/storage';
+=======
+>>>>>>> parent of 7cd4dd6... image base64
 // import {Md5} from 'ts-md5/dist/md5';
 
 
@@ -32,9 +35,8 @@ export class SignupPage {
   confirmPassword: string;
   savamAppURL = "http://savamapp.com/API/";
   public result: any;
-  baseImg:string="assets/imgs/00-Log in/user.png"; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public imagePicker:ImagePicker, public base64: Base64, private camera: Camera) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public imagePicker:ImagePicker) {
   }
 
   ionViewDidLoad() {
@@ -97,6 +99,7 @@ export class SignupPage {
     return re.test(email);
   }
 
+<<<<<<< HEAD
   getPictures() {
     const options: CameraOptions = {
       quality: 100,
@@ -114,5 +117,19 @@ export class SignupPage {
      }, (err) => {
         // Handle error
      });    
+=======
+  getPictures(){
+
+    //TODO
+    this.imagePicker.getPictures({
+    }).then( results =>{
+      console.log(results);
+      for(let i=0; i < results.length;i++){
+        console.log('Image URI: ' + results[i]);
+      };
+    }, (err) => { 
+
+    });
+>>>>>>> parent of 7cd4dd6... image base64
   }
 }
