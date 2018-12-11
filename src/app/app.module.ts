@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { Camera } from '@ionic-native/camera';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
@@ -98,6 +99,7 @@ import { ResterantListsPage} from '../pages/resterant-lists/resterant-lists';
     ImagePicker,
     Webservices,
     AndroidPermissions,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

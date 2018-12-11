@@ -41,7 +41,7 @@ export class SigninPage {
   }
 
   loginButton() {
-    if (typeof this.email !== 'undefined' && typeof this.password !== 'undefined') {
+    /*if (typeof this.email !== 'undefined' && typeof this.password !== 'undefined') {
       var loginApiUrl = "http://savamapp.com/API/LoginCheck/" + this.email + "/" + this.password;
       return new Promise(resolve => {
         this.http.get(loginApiUrl).subscribe(data => {
@@ -65,6 +65,7 @@ export class SigninPage {
           console.log(err);
         });
       });
-    }
+    }*/
+    this.navCtrl.setRoot(TabsPage);
   }
 }

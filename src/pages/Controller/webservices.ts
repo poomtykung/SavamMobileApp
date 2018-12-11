@@ -17,9 +17,10 @@ export class Webservices {
                         this.storage.get('fName').then((fName) => {
                             this.storage.get('lName').then((lName) => {
                                 this.storage.get('tel').then((tel) => {
+                                    this.storage.get('user_pic').then((picture) => {
                                     var saveEditUser = "http://savamapp.com/API/SaveEditUser/"
                                         + username + "/" + password + "/" + fName + "/"
-                                        + lName + "/" + email + "/" + tel + "/" + birthdate;
+                                        + lName + "/" + email + "/" + tel + "/" + birthdate + "/" + picture;
                                     this.http.get(saveEditUser).subscribe(isInsertUserSuccess => {
                                         if (isInsertUserSuccess == 1) {
                                         } else {
@@ -27,6 +28,7 @@ export class Webservices {
                                         }
                                     }, err => {
                                         console.log(err);
+                                    });
                                     });
                                 });
                             });

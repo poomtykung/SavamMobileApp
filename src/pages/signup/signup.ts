@@ -5,12 +5,11 @@ import { HttpClient } from '@angular/common/http';
 //import { getNonHydratedSegmentIfLinkAndUrlMatch } from 'ionic-angular/umd/navigation/url-serializer';
 import { SigninPage } from '../signin/signin';
 import {ImagePicker} from  '@ionic-native/image-picker';
-<<<<<<< HEAD
-import { Base64 } from '@ionic-native/base64';
+
+//import { Base64 } from '@ionic-native/base64';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Storage } from '@ionic/storage';
-=======
->>>>>>> parent of 7cd4dd6... image base64
+
 // import {Md5} from 'ts-md5/dist/md5';
 
 
@@ -35,8 +34,8 @@ export class SignupPage {
   confirmPassword: string;
   savamAppURL = "http://savamapp.com/API/";
   public result: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public imagePicker:ImagePicker) {
+  picToView : string = "assets/imgs/00-Log in/user.png";
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public imagePicker:ImagePicker, public camera : Camera,public storage : Storage) {
   }
 
   ionViewDidLoad() {
@@ -63,7 +62,7 @@ export class SignupPage {
                   } else {
                     if ((typeof this.password !== 'undefined') && (typeof this.confirmPassword !== 'undefined')) {
                       if (this.password == this.confirmPassword) {
-                        var addUserAPIUrl = this.savamAppURL + "AddUser/" + this.username + "/" + this.password + "/null/" + this.email + "/null/2000-01-01";
+                        var addUserAPIUrl = this.savamAppURL + "AddUser/" + this.username + "/" + this.password + "/null/" + this.email + "/null/2000-01-01/"+this.picToView;
                         this.http.get(addUserAPIUrl).subscribe(isInsertUserSuccess => {
                           if (isInsertUserSuccess == 1) {
                             alert("Register Success");
@@ -99,7 +98,7 @@ export class SignupPage {
     return re.test(email);
   }
 
-<<<<<<< HEAD
+
   getPictures() {
     const options: CameraOptions = {
       quality: 100,
@@ -111,25 +110,14 @@ export class SignupPage {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
       let base64Image = 'data:image/jpeg;base64,' + imageData;
-      this.baseImg = base64Image;
+      this.picToView = base64Image;
 
       /**insert to storage */
+      this.storage.set("user_pic",base64Image);
      }, (err) => {
         // Handle error
+        alert(err)
      });    
-=======
-  getPictures(){
 
-    //TODO
-    this.imagePicker.getPictures({
-    }).then( results =>{
-      console.log(results);
-      for(let i=0; i < results.length;i++){
-        console.log('Image URI: ' + results[i]);
-      };
-    }, (err) => { 
-
-    });
->>>>>>> parent of 7cd4dd6... image base64
-  }
+    }
 }
