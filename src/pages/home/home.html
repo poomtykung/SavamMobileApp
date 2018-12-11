@@ -12,15 +12,29 @@
 
 <ion-content class="bg-app">
   <div class="card">
-    <ion-row style="padding-top: 20px;">
-      <ion-col col-3 *ngFor="let item of categoryDataListsWithArray">
-        <button class="btn-home" *ngIf="item[0].length != 0" (click)="gotoRestaurantListByCategory(item[0].id_product_type)">
+    <ion-row style="padding-top: 20px;" *ngFor="let item of categoryDataListsWithArray">
+      <ion-col col-3>
+        <button class="btn-home" *ngIf="item[0] != undefined" (click)="gotoRestaurantListByCategory(item[0].id_product_type)">
           <img src="assets/imgs/01-Home/01-sushi.png">
           <p>{{item[0].product_type_name}}</p>
         </button>
-        <button class="btn-home" *ngIf="item[1].length != 0" (click)="gotoRestaurantListByCategory(item[0].id_product_type)">
+      </ion-col>
+      <ion-col col-3>
+        <button class="btn-home" *ngIf="item[1] != undefined" (click)="gotoRestaurantListByCategory(item[1].id_product_type)">
           <img src="assets/imgs/01-Home/01-sushi.png">
           <p>{{item[1].product_type_name}}</p>
+        </button>
+      </ion-col>
+      <ion-col col-3>
+        <button class="btn-home" *ngIf="item[2] != undefined" (click)="gotoRestaurantListByCategory(item[2].id_product_type)">
+          <img src="assets/imgs/01-Home/01-sushi.png">
+          <p>{{item[2].product_type_name}}</p>
+        </button>
+      </ion-col>
+      <ion-col col-3>
+        <button class="btn-home" *ngIf="item[3] != undefined" (click)="gotoRestaurantListByCategory(item[3].id_product_type)">
+          <img src="assets/imgs/01-Home/01-sushi.png">
+          <p>{{item[3].product_type_name}}</p>
         </button>
       </ion-col>
     </ion-row>

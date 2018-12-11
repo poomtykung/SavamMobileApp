@@ -24,24 +24,23 @@ export class HomePage {
     var menuCategoryLists = [];
     this.categoryDataListsWithArray = [];
     this.http.get(menuCategoryApiUrl).subscribe(data => {
+      //TODO {"data":{"0":{"id_product_type":1,"product_type_name":"ขนมหวาน","stdel":0,"note":"ขนมหวานต่างๆ","stvis":0,"stpic":0},"1":{"id_product_type":2,"product_type_name":"อาหารไทย","stdel":0,"note":"อาหารไทยต่างๆ","stvis":0,"stpic":0}
+      // JSON is valid please fixed on controller in backend
       this.categoryDataLists = data;
       this.categoryDataLists = this.categoryDataLists.data;
+      var k = 0;
       for(var i=0; i < this.categoryDataLists.length; i++) {
-        menuCategoryLists.push(this.categoryDataLists[i]);
-
-        if(menuCategoryLists.length == 2){
+        if(k==4){
           this.categoryDataListsWithArray.push(menuCategoryLists);
           menuCategoryLists = [];
-        } 
-        if (i == this.categoryDataLists.length - 1 ){
-            if(this.categoryDataLists.length % 2 == 1) {
-              var array = [];
-              menuCategoryLists.push(array);
-            }
-            this.categoryDataListsWithArray.push(menuCategoryLists);
-            menuCategoryLists = [];
+          k =0;
+          menuCategoryLists.push(this.categoryDataLists[i]);
+        } else {
+          menuCategoryLists.push(this.categoryDataLists[i]);
         }
+        k++;
       }
+      this.categoryDataListsWithArray.push(menuCategoryLists);
     });
 
     this.getResterantDataLists();
